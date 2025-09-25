@@ -46,6 +46,7 @@ def process_order(event=None):
     <p>You bought <br><b>{items_html}</b></p>
     <h5>And your total is <b>₱{total}</b></h5>
     """
-    # Insert the order summary html into the html element with id 'order_summary' so it loads with html styling :)
+    # insert the order summary html into the html element with id 'order_summary' so it loads with html styling :)
     document.getElementById("order_summary").innerHTML = summary_html
+
 
