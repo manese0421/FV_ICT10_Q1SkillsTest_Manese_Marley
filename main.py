@@ -23,7 +23,7 @@ def process_order(event=None):
     if not ordered_items:
         items_html = '<span style="color:red">No items selected!</span>'
     else:
-        items_html = ".join(f"<li>{item}</li>" for item in ordered_items) + "</ul>"
+        items_html = "<ul>" +"".join(f"<li>{item}</li>" for item in ordered_items) + "</ul>"
 
     summary_html = f"""
     <h4><i><b>Your Order Summary</b></i></h4>
