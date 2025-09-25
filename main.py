@@ -23,7 +23,7 @@ def process_order(event=None):
     if not ordered_items:
         items_html = '<span style="color:red">No items selected!</span>'
     else:
-        items_html = "<ul>" + "".join(f"<li>{item}</li>" for item in ordered_items) + "</ul>"
+        items_html = ".join(f"<li>{item}</li>" for item in ordered_items) + "</ul>"
 
     summary_html = f"""
     <h4><i><b>Your Order Summary</b></i></h4>
@@ -33,4 +33,5 @@ def process_order(event=None):
     <p>You bought <br><b>{items_html}</b></p>
     <h5>And your total is <b>₱{total}</b></h5>
     """
+
     document.getElementById("order_summary").innerHTML = summary_html
